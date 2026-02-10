@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { Square } from "lucide-react";
 
 export const buttonConfig = {
   id: "button",
   name: "Button",
+  icon: Square,
   description:
     "A button component triggers an event or action. They let users know what will happen next.",
   component: Button,

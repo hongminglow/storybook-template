@@ -1,5 +1,5 @@
 import { useTheme } from "@/hooks/useTheme";
-import { Moon, Sun, Search, ChevronDown, Globe } from "lucide-react";
+import { Moon, Sun, ChevronDown, Globe } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,21 +7,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { GlobalSearch } from "./GlobalSearch";
 
 export function TopBar() {
   const { theme, setTheme } = useTheme();
 
   return (
     <header className="h-16 flex items-center px-6 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50 w-full font-sans gap-8">
-      {/* Search area - filling space (1fr) */}
-      <div className="flex-1 relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-        <input
-          type="text"
-          placeholder="Search components..."
-          className="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg pl-10 pr-4 py-2 text-sm text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all shadow-sm"
-        />
-      </div>
+      {/* Global Search - centered and filling space */}
+      <GlobalSearch />
 
       <div className="flex items-center gap-2 shrink-0">
         {/* Language Switcher with Flags */}
@@ -30,7 +24,7 @@ export function TopBar() {
             <Button
               variant="ghost"
               size="sm"
-              className="gap-2 px-3 hover:bg-gray-100 dark:hover:bg-gray-800 h-9 transition-colors"
+              className="gap-2 px-3 hover:bg-gray-100 dark:hover:bg-gray-800 h-9 transition-colors border border-transparent hover:border-gray-200 dark:hover:border-gray-700"
             >
               <Globe className="w-4 h-4 text-gray-500" />
               <span className="text-sm font-medium">English</span>
@@ -79,7 +73,7 @@ export function TopBar() {
           variant="ghost"
           size="icon"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="rounded-full text-amber-500 dark:text-amber-400 hover:bg-gray-100 dark:hover:bg-gray-800 h-9 w-9 transition-all"
+          className="rounded-full text-amber-500 dark:text-amber-400 hover:bg-gray-100 dark:hover:bg-gray-800 h-9 w-9 transition-all border border-transparent hover:border-gray-200 dark:hover:border-gray-700"
           aria-label="Toggle theme"
         >
           {theme === "dark" ? (

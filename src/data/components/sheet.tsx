@@ -7,6 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { PanelRight } from "lucide-react";
 
 const SheetExample = () => {
   return (
@@ -34,6 +35,7 @@ const SheetExample = () => {
 export const sheetConfig = {
   id: "sheet",
   name: "Sheet",
+  icon: PanelRight,
   description:
     "Extends the Dialog component to display content that complements the main content of the screen.",
   component: SheetExample,

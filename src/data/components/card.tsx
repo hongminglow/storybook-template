@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Layout } from "lucide-react";
 
 interface CardExampleProps {
   title?: string;
@@ -42,6 +43,7 @@ const CardExample = (props: CardExampleProps) => {
 export const cardConfig = {
   id: "card",
   name: "Card",
+  icon: Layout,
   description: "Displays a card with header, content, and footer.",
   component: CardExample,
   props: [

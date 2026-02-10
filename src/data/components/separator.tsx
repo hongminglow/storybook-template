@@ -1,8 +1,10 @@
 import { Separator } from "@/components/ui/separator";
+import { Minus } from "lucide-react";
 
 export const separatorConfig = {
   id: "separator",
   name: "Separator",
+  icon: Minus,
   description: "Visually or semantically separates content.",
   component: Separator,
   props: [

@@ -31,26 +31,29 @@ export function Sidebar({ configs, className }: SidebarProps) {
             Components
           </h3>
           <ul className="space-y-1">
-            {configs.map((config) => (
-              <li key={config.id}>
-                <NavLink
-                  to={`/${config.id}`}
-                  className={({ isActive }) =>
-                    cn(
-                      "flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
-                      isActive
-                        ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
-                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800",
-                    )
-                  }
-                >
-                  <Folder
-                    className={cn("w-4 h-4", { "text-pink-500": true })}
-                  />
-                  {config.name}
-                </NavLink>
-              </li>
-            ))}
+            {configs.map((config) => {
+              const Icon = config.icon || Folder;
+              return (
+                <li key={config.id}>
+                  <NavLink
+                    to={`/${config.id}`}
+                    className={({ isActive }) =>
+                      cn(
+                        "flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                        isActive
+                          ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
+                          : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800",
+                      )
+                    }
+                  >
+                    <Icon
+                      className={cn("w-4 h-4", { "text-pink-500": true })}
+                    />
+                    {config.name}
+                  </NavLink>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
