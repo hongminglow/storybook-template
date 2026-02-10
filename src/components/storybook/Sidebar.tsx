@@ -17,9 +17,7 @@ export function Sidebar({ configs, className }: SidebarProps) {
       )}
     >
       <div className="p-5 flex items-center gap-3 border-b border-gray-200 dark:border-gray-800 h-16">
-        <div className="w-6 h-6 bg-pink-500 rounded-md flex items-center justify-center text-white font-bold text-xs">
-          S
-        </div>
+        <img src="/logo.svg" className="size-8" />
         <span className="font-bold text-lg text-gray-900 dark:text-gray-100">
           Storybook
         </span>
