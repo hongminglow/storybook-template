@@ -43,6 +43,7 @@ const CardExample = (props: CardExampleProps) => {
 export const cardConfig = {
   id: "card",
   name: "Card",
+  tags: ["container", "surface", "content", "layout"],
   icon: Layout,
   description: "Displays a card with header, content, and footer.",
   component: CardExample,
@@ -66,10 +67,9 @@ export const cardConfig = {
       defaultValue: "-",
     },
   ],
-  examples: [
-    {
-      name: "Default",
-      code: `
+  examples: {
+    name: "Default",
+    code: `
 <Card className="w-[350px]">
   <CardHeader>
     <CardTitle>Create project</CardTitle>
@@ -84,10 +84,9 @@ export const cardConfig = {
   </CardFooter>
 </Card>
       `,
-      props: {
-        title: "Create project",
-        description: "Deploy your new project in one-click.",
-      },
+    props: {
+      title: "Create project",
+      description: "Deploy your new project in one-click.",
     },
-  ],
+  },
 };

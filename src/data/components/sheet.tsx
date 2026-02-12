@@ -35,6 +35,7 @@ const SheetExample = () => {
 export const sheetConfig = {
   id: "sheet",
   name: "Sheet",
+  tags: ["overlay", "drawer", "panel", "dialog"],
   icon: PanelRight,
   description:
     "Extends the Dialog component to display content that complements the main content of the screen.",
@@ -47,10 +48,9 @@ export const sheetConfig = {
       defaultValue: "'right'",
     },
   ],
-  examples: [
-    {
-      name: "Default",
-      code: `
+  examples: {
+    name: "Default",
+    code: `
 <Sheet>
   <SheetTrigger>Open</SheetTrigger>
   <SheetContent>
@@ -63,7 +63,6 @@ export const sheetConfig = {
   </SheetContent>
 </Sheet>
       `,
-      props: {},
-    },
-  ],
+    props: {},
+  },
 };

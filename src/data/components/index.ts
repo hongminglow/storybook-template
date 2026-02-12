@@ -4,8 +4,9 @@ import { cardConfig } from "./card";
 import { separatorConfig } from "./separator";
 import { sheetConfig } from "./sheet";
 import { scrollAreaConfig } from "./scroll-area";
+import { type ComponentConfig } from "@/types";
 
-export const componentConfigs = [
+export const componentConfigs: ComponentConfig[] = [
   buttonConfig,
   inputConfig,
   cardConfig,

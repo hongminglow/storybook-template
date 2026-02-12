@@ -4,6 +4,7 @@ import { Type } from "lucide-react";
 export const inputConfig = {
   id: "input",
   name: "Input",
+  tags: ["form", "field", "text", "entry"],
   icon: Type,
   description:
     "Displays a form input field or a component that looks like an input field.",
@@ -40,26 +41,9 @@ export const inputConfig = {
       defaultValue: "-",
     },
   ],
-  examples: [
-    {
-      name: "Default",
-      code: '<Input type="text" placeholder="Email" />',
-      props: { type: "text", placeholder: "Email" },
-    },
-    {
-      name: "Password",
-      code: '<Input type="password" placeholder="Password" />',
-      props: { type: "password", placeholder: "Password" },
-    },
-    {
-      name: "Disabled",
-      code: '<Input disabled placeholder="Disabled input" />',
-      props: { disabled: true, placeholder: "Disabled input" },
-    },
-    {
-      name: "With Value",
-      code: '<Input defaultValue="Read only value" readOnly />',
-      props: { defaultValue: "Read only value", readOnly: true },
-    },
-  ],
+  examples: {
+    name: "Default",
+    code: '<Input type="text" placeholder="Email" />',
+    props: { type: "text", placeholder: "Email" },
+  },
 };

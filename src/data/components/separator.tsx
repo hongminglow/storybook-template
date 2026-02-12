@@ -4,6 +4,7 @@ import { Minus } from "lucide-react";
 export const separatorConfig = {
   id: "separator",
   name: "Separator",
+  tags: ["divider", "layout", "spacing", "line"],
   icon: Minus,
   description: "Visually or semantically separates content.",
   component: Separator,
@@ -21,10 +22,9 @@ export const separatorConfig = {
       defaultValue: "true",
     },
   ],
-  examples: [
-    {
-      name: "Horizontal",
-      code: `
+  examples: {
+    name: "Horizontal",
+    code: `
 <div>
   <div className="space-y-1">
     <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
@@ -42,7 +42,6 @@ export const separatorConfig = {
   </div>
 </div>
       `,
-      props: { orientation: "horizontal" },
-    },
-  ],
+    props: { orientation: "horizontal" },
+  },
 };

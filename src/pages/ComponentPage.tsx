@@ -23,10 +23,7 @@ export function ComponentPage({ config }: ComponentPageProps) {
         defaults[p.name] = value;
       }
     });
-    if (config.examples.length > 0) {
-      return { ...defaults, ...config.examples[0].props };
-    }
-    return defaults;
+    return { ...defaults, ...config.examples.props };
   }, [config]);
 
   const [propsState, setPropsState] =
@@ -40,7 +37,7 @@ export function ComponentPage({ config }: ComponentPageProps) {
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(config.examples[0]?.code || "");
+      await navigator.clipboard.writeText(config.examples.code || "");
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -109,7 +106,7 @@ export function ComponentPage({ config }: ComponentPageProps) {
                   <PropsTable
                     props={config.props}
                     values={propsState}
-                    canvasProps={config.examples[0]?.props || {}}
+                    canvasProps={config.examples.props || {}}
                     onPropChange={handlePropChange}
                   />
                 </div>
@@ -133,7 +130,7 @@ export function ComponentPage({ config }: ComponentPageProps) {
                 </div>
                 <div className="rounded-xl bg-[#0d0d0d] p-6 overflow-x-auto border border-gray-800 shadow-2xl min-h-[120px]">
                   <pre className="text-sm text-pink-300 font-mono leading-relaxed">
-                    {config.examples[0]?.code}
+                    {config.examples.code}
                   </pre>
                 </div>
               </div>

@@ -25,15 +25,15 @@ const ScrollAreaExample = () => {
 export const scrollAreaConfig = {
   id: "scroll-area",
   name: "Scroll Area",
+  tags: ["scroll", "container", "viewport", "overflow"],
   icon: MousePointer2,
   description:
     "Augments native scroll functionality for custom cross-browser styling.",
   component: ScrollAreaExample,
   props: [],
-  examples: [
-    {
-      name: "Default",
-      code: `
+  examples: {
+    name: "Default",
+    code: `
 <ScrollArea className="h-72 w-48 rounded-md border">
   <div className="p-4">
     <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
@@ -48,7 +48,6 @@ export const scrollAreaConfig = {
   </div>
 </ScrollArea>
       `,
-      props: {},
-    },
-  ],
+    props: {},
+  },
 };

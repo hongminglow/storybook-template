@@ -4,6 +4,7 @@ import { Square } from "lucide-react";
 export const buttonConfig = {
   id: "button",
   name: "Button",
+  tags: ["action", "click", "cta", "form", "submit"],
   icon: Square,
   description:
     "A button component triggers an event or action. They let users know what will happen next.",
@@ -34,31 +35,9 @@ export const buttonConfig = {
       defaultValue: "-",
     },
   ],
-  examples: [
-    {
-      name: "Default",
-      code: '<Button variant="default">Button</Button>',
-      props: { variant: "default", children: "Button" },
-    },
-    {
-      name: "Secondary",
-      code: '<Button variant="secondary">Button</Button>',
-      props: { variant: "secondary", children: "Button" },
-    },
-    {
-      name: "Outline",
-      code: '<Button variant="outline">Button</Button>',
-      props: { variant: "outline", children: "Button" },
-    },
-    {
-      name: "Ghost",
-      code: '<Button variant="ghost">Button</Button>',
-      props: { variant: "ghost", children: "Button" },
-    },
-    {
-      name: "Destructive",
-      code: '<Button variant="destructive">Button</Button>',
-      props: { variant: "destructive", children: "Button" },
-    },
-  ],
+  examples: {
+    name: "Default",
+    code: '<Button variant="default">Button</Button>',
+    props: { variant: "default", children: "Button" },
+  },
 };

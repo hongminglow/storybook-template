@@ -69,14 +69,29 @@ export function GlobalSearch() {
               return (
                 <CommandItem
                   key={config.id}
-                  value={config.name}
+                  value={`${config.name} ${config.tags.join(" ")}`}
+                  keywords={config.tags}
                   onSelect={() => {
                     runCommand(() => navigate(`/${config.id}`));
                   }}
                   className="gap-2 cursor-pointer"
                 >
                   <Icon className="h-4 w-4 text-pink-500" />
-                  <span>{config.name}</span>
+                  <div className="flex items-center justify-between w-full gap-2">
+                    <span>{config.name}</span>
+                    {config.tags.length > 0 ? (
+                      <div className="flex items-center gap-1">
+                        {config.tags.slice(0, 3).map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-[10px] px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400"
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
                 </CommandItem>
               );
             })}
