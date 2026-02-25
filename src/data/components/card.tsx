@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Layout } from "lucide-react";
+import { type ComponentConfig } from "@/types";
 
 interface CardExampleProps {
   title?: string;
@@ -40,7 +41,7 @@ const CardExample = (props: CardExampleProps) => {
   );
 };
 
-export const cardConfig = {
+export const cardConfig: ComponentConfig = {
   id: "card",
   name: "Card",
   group: "Layout",

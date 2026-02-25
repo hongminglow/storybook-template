@@ -1,6 +1,7 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { MousePointer2 } from "lucide-react";
+import { type ComponentConfig } from "@/types";
 
 const tags = Array.from({ length: 50 }).map((_, i, a) => `v1.2.0-beta.${a.length - i}`);
 
@@ -20,7 +21,7 @@ const ScrollAreaExample = () => {
   );
 };
 
-export const scrollAreaConfig = {
+export const scrollAreaConfig: ComponentConfig = {
   id: "scroll-area",
   name: "Scroll Area",
   group: "Layout",

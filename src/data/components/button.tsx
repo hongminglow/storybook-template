@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Square } from "lucide-react";
+import { type ComponentConfig } from "@/types";
 
-export const buttonConfig = {
+export const buttonConfig: ComponentConfig = {
   id: "button",
   name: "Button",
   group: "Form",

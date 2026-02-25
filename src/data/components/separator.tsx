@@ -1,7 +1,8 @@
 import { Separator } from "@/components/ui/separator";
 import { Minus } from "lucide-react";
+import { type ComponentConfig } from "@/types";
 
-export const separatorConfig = {
+export const separatorConfig: ComponentConfig = {
   id: "separator",
   name: "Separator",
   group: "Layout",

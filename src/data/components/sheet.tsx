@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { PanelRight } from "lucide-react";
+import { type ComponentConfig } from "@/types";
 
 const SheetExample = () => {
   return (
@@ -30,7 +31,7 @@ const SheetExample = () => {
   );
 };
 
-export const sheetConfig = {
+export const sheetConfig: ComponentConfig = {
   id: "sheet",
   name: "Sheet",
   tags: ["overlay", "drawer", "panel", "dialog"],

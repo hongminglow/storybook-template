@@ -1,7 +1,8 @@
 import { Input } from "@/components/ui/input";
 import { Type } from "lucide-react";
+import { type ComponentConfig } from "@/types";
 
-export const inputConfig = {
+export const inputConfig: ComponentConfig = {
   id: "input",
   name: "Input",
   group: "Form",
