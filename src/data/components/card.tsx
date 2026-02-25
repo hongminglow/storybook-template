@@ -43,6 +43,7 @@ const CardExample = (props: CardExampleProps) => {
 export const cardConfig = {
   id: "card",
   name: "Card",
+  group: "Layout",
   tags: ["container", "surface", "content", "layout"],
   icon: Layout,
   description: "Displays a card with header, content, and footer.",

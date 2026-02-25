@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import { ThemeProvider } from "@/hooks/useTheme";
 import { Layout } from "@/components/storybook/Layout";
 import { ComponentPage } from "@/pages/ComponentPage";
@@ -29,10 +23,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route
-              index
-              element={<Navigate to={`/${componentConfigs[0].id}`} replace />}
-            />
+            <Route index element={<Navigate to={`/${componentConfigs[0].id}`} replace />} />
             <Route path=":componentId" element={<ComponentRoute />} />
           </Route>
         </Routes>

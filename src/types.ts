@@ -16,6 +16,7 @@ export type ComponentType = React.ComponentType<any>;
 export interface ComponentConfig {
   id: string;
   name: string;
+  group?: string;
   tags: string[];
   description: string;
   icon?: any; // Using any for icon to avoid strict type issues with various lucide/react icon types

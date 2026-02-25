@@ -26,8 +26,7 @@ export function ComponentPage({ config }: ComponentPageProps) {
     return { ...defaults, ...config.examples.props };
   }, [config]);
 
-  const [propsState, setPropsState] =
-    useState<Record<string, unknown>>(initialProps);
+  const [propsState, setPropsState] = useState<Record<string, unknown>>(initialProps);
 
   const ComponentToRender = config.component;
 

@@ -4,10 +4,10 @@ import { Type } from "lucide-react";
 export const inputConfig = {
   id: "input",
   name: "Input",
+  group: "Form",
   tags: ["form", "field", "text", "entry"],
   icon: Type,
-  description:
-    "Displays a form input field or a component that looks like an input field.",
+  description: "Displays a form input field or a component that looks like an input field.",
   component: Input,
   props: [
     {

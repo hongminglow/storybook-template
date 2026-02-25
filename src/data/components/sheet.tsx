@@ -23,9 +23,7 @@ const SheetExample = () => {
           </SheetDescription>
         </SheetHeader>
         <div className="grid gap-4 py-4">
-          <div className="p-4 bg-muted rounded-md text-sm">
-            Sheet Content Area
-          </div>
+          <div className="p-4 bg-muted rounded-md text-sm">Sheet Content Area</div>
         </div>
       </SheetContent>
     </Sheet>

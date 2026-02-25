@@ -2,9 +2,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { MousePointer2 } from "lucide-react";
 
-const tags = Array.from({ length: 50 }).map(
-  (_, i, a) => `v1.2.0-beta.${a.length - i}`,
-);
+const tags = Array.from({ length: 50 }).map((_, i, a) => `v1.2.0-beta.${a.length - i}`);
 
 const ScrollAreaExample = () => {
   return (
@@ -25,10 +23,10 @@ const ScrollAreaExample = () => {
 export const scrollAreaConfig = {
   id: "scroll-area",
   name: "Scroll Area",
+  group: "Layout",
   tags: ["scroll", "container", "viewport", "overflow"],
   icon: MousePointer2,
-  description:
-    "Augments native scroll functionality for custom cross-browser styling.",
+  description: "Augments native scroll functionality for custom cross-browser styling.",
   component: ScrollAreaExample,
   props: [],
   examples: {

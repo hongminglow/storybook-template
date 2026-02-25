@@ -4,6 +4,7 @@ import { Square } from "lucide-react";
 export const buttonConfig = {
   id: "button",
   name: "Button",
+  group: "Form",
   tags: ["action", "click", "cta", "form", "submit"],
   icon: Square,
   description:

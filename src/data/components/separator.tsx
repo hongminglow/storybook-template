@@ -4,6 +4,7 @@ import { Minus } from "lucide-react";
 export const separatorConfig = {
   id: "separator",
   name: "Separator",
+  group: "Layout",
   tags: ["divider", "layout", "spacing", "line"],
   icon: Minus,
   description: "Visually or semantically separates content.",

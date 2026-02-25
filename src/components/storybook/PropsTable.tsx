@@ -23,16 +23,9 @@ interface PropsTableProps {
   onPropChange: (name: string, value: unknown) => void;
 }
 
-export function PropsTable({
-  props,
-  values,
-  canvasProps,
-  onPropChange,
-}: PropsTableProps) {
+export function PropsTable({ props, values, canvasProps, onPropChange }: PropsTableProps) {
   const getValue = (propName: string) => {
-    return (
-      (values[propName] as string) || (canvasProps[propName] as string) || ""
-    );
+    return (values[propName] as string) || (canvasProps[propName] as string) || "";
   };
 
   return (
@@ -52,12 +45,8 @@ export function PropsTable({
               <TableCell className="font-mono text-pink-600 dark:text-pink-400 font-medium">
                 {prop.name}
               </TableCell>
-              <TableCell className="text-gray-600 dark:text-gray-300">
-                {prop.description}
-              </TableCell>
-              <TableCell className="font-mono text-gray-500">
-                {prop.defaultValue}
-              </TableCell>
+              <TableCell className="text-gray-600 dark:text-gray-300">{prop.description}</TableCell>
+              <TableCell className="font-mono text-gray-500">{prop.defaultValue}</TableCell>
               <TableCell>
                 {prop.name === "variant" && (
                   <Select
